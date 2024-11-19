@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunInfo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-slate-700 text-white fira-code p-4 flex flex-col h-screen">
+    <header>
+        <h1 class="text-3xl">SunInfo Website</h1>
+    </header>
+    <main class="mt-2">
+        <div id="credits" class="fixed top-5 right-2 text-xs h-auto">
+            <span>Powered by <br /><a href="https://sunrisesunset.io">SunriseSunset.io</a></span>
+        </div>
+        <div id="locationSection" class="flex flex-col w-full lg:w-3/4 gap-2 mt-8 mx-auto">
+            <p>Choose a location</p>
+            <select id="locationSelector" class="cursor-pointer w-full outline-none p-4 text-slate-700">
+                <option value="42.25622126601518,-74.65747558236907">Roxbury, Delaware County, NY</option>
+                <option value="38.72712827826023,-105.17089086465072">County Road 881, Beacon Hill, Teller County, CO</option>
+                <option value="57.489446497304485,-97.9582464197605">Unorganized Division No. 23, Manitoba, Canada</option>
+                <option value="41.647479082588276,-95.71743108996087">250th Street, Harrison County, IA</option>
+                <option value="24.025667242761088,-101.7626391294779">Mazapil, Mexico</option>
+                <option value="40.97670273032784,-82.6907201630556">4911 Parcel Road, Plymouth Township, OH</option>
+                <option value="41.680741611755224,-93.62094480016206">204 Northwest 66th Avenue, Saylorville, Polk County, IA</option>
+                <option value="35.35053006727743,-96.49089205124588">OK 99A, Cromwell, Seminole County, OK</option>
+                <option value="30.642394451100287,-107.8689098764647">Nuevo Casas Grandes, Mexico</option>
+                <option value="34.182212311964584,-117.65929730746694">Barrett Stoddard Truck Trail, San Bernardino County, CA</option>
+            </select>
+            <button id="userLocation" class="w-full outline-none p-4 bg-indigo-950 text-slate-200 mt-2 hover:opacity-70 transition transition-300">Use my Location</button>
+        </div>
+        <div id="sunsetInfoSection" class="mt-8 mx-auto w-full lg:w-3/4 grid grid-cols-1 lg:grid-cols-2 grid-rows-2 lg:grid-rows-1 gap-2">
+            <div id="today" class="cursor-not-allowed bg-purple-800 p-6 w-full border border-2 border-slate-400 flex flex-col gap-2 justify-center items-center"></div>
+            <div id="tomorrow" class="cursor-not-allowed bg-purple-800 p-6 w-full border border-2 border-slate-400 flex flex-col gap-2 justify-center items-center"></div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
